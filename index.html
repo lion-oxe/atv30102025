@@ -128,7 +128,7 @@ ejrrkekekrkr
 
 <img src="https://i.imgur.com/5u7FM0Y.jpeg">
 
-<h1>Inscreva-se em cursos do Senagapint</h1>
+<h1>Inscreva-se num curso do Senagapint</h1>
 <p>Serviço Nacional de Aprendizagem da Galinha Pintadinha</p>
 
 <form>
@@ -169,7 +169,7 @@ ejrrkekekrkr
 
 <!-- SCRIPT AQUI -->
 <script>
-    // Identar telefone
+  // Telefone
       const input = document.getElementById('telefone');
 
       input.addEventListener('input', function() {
@@ -187,18 +187,20 @@ ejrrkekekrkr
         this.value = valor;
       };
     
-    // Função para restringir funcionamento do botão submit
+    // Botão submit
     function validarFormulario(event) {
       event.preventDefault();
-      const nome = document.getElementById('nomecompleto').value();
-      const email = document.getElementById('email').value();
-      const telefone = document.getElementById('telefone').value();
-      const curso = document.getElementById('curso').value();
-      if (nome !== "" && email !== "" && telefone !== "" && curso !== "") {
+      const nomecompleto = document.getElementById('nomecompleto').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const telefone = document.getElementById('telefone').value.trim();
+      const curso = document.getElementById('curso').value.trim();
+      if (nomecompleto !== "" && email !== "" && telefone !== "" && curso !== "") {
+        return true;
         alert("Enviando cadastro...!");
         window.location.href="inscricaorealizada.html";
       }
       else {
+        return false;
         alert("Por favor, preencha todos os campos obrigatórios!");
       }
     }
