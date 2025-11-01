@@ -158,7 +158,7 @@ ejrrkekekrkr
 
 <br>
 
-    <input type="submit" value="ENVIAR INSCRIÇÃO" class="botao" id="botao1" onclick="(validarFormulario(event))">
+    <input type="submit" value="ENVIAR INSCRIÇÃO" class="botao" id="botao1" onclick="validarFormulario(event)">
 
 <br>
 
@@ -195,12 +195,10 @@ ejrrkekekrkr
       const telefone = document.getElementById('telefone').value.trim();
       const curso = document.getElementById('curso').value.trim();
       if (nomecompleto !== "" && email !== "" && telefone !== "" && curso !== "") {
-        return true;
         alert("Enviando cadastro...!");
-        window.location.href="inscricaorealizada.html";
+        window.location.href = "inscricaorealizada.html";
       }
       else {
-        return false;
         alert("Por favor, preencha todos os campos obrigatórios!");
       }
     }
